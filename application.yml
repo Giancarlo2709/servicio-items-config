@@ -6,3 +6,16 @@ config:
         secret: 12345
       jwt:
         key: algun_codigo_secreto_aeiou
+
+spring:
+  application:
+    name: service-items
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://zipkin-server:9411/
+    sender:
+      type: rabbit
+  rabbitmq:
+    host: rabbitmq
